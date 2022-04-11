@@ -155,6 +155,10 @@ if __name__ == '__main__':
             print(f'The number of lines shall be <=2! Not {len(lines)}')
             sys.exit(-300)
 
+        if any(map(lambda x:len(clean_text(x))-16,lines)):
+            print('The number of characters shall be <=16!')
+            #sys.exit(-400)
+
         print(text)
 
         for lidx, line in enumerate(lines):
